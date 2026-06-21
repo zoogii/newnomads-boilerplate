@@ -69,6 +69,11 @@ const GOOGLE_UTF8_FONT_ALLOWLIST: Record<string, GoogleFontConfig> = {
     css2Family: "Roboto:wght@400;500;700",
     fallback: '"Segoe UI", "Noto Sans", Arial, sans-serif',
   },
+  rubik: {
+    family: "Rubik",
+    css2Family: "Rubik:wght@400;500;600;700",
+    fallback: '"Segoe UI", "Noto Sans", Arial, sans-serif',
+  },
 };
 
 export type SiteFont = {

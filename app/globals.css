@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Inter", "Segoe UI", "Noto Sans", Arial, sans-serif;
+  --font-sans: "Rubik", "Segoe UI", "Noto Sans", Arial, sans-serif;
   --font-mono: "JetBrains Mono", "Consolas", monospace;
 
-  --background: 35 33% 97%;
-  --foreground: 211 24% 13%;
+  --background: 120 20% 97%;
+  --foreground: 120 5% 6%;
 
-  --primary: 199 95% 43%;
+  --primary: 120 5% 6%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 24 100% 60%;
-  --secondary-foreground: 210 11% 15%;
+  --secondary: 120 15% 94%;
+  --secondary-foreground: 120 5% 10%;
 
-  --muted: 200 28% 93%;
-  --muted-foreground: 212 13% 36%;
+  --muted: 120 12% 94%;
+  --muted-foreground: 120 4% 32%;
 
-  --border: 208 24% 84%;
-  --ring: 199 95% 43%;
+  --border: 120 9% 84%;
+  --ring: 120 5% 6%;
 
   --radius-xs: 0.375rem;
   --radius-sm: 0.5rem;
@@ -41,13 +41,7 @@ body {
   @apply bg-background text-foreground antialiased;
   font-family: var(--font-sans);
   background-attachment: fixed;
-  background-image: radial-gradient(
-      62rem 38rem at 10% -8%,
-      hsl(var(--secondary) / 0.28),
-      transparent 55%
-    ),
-    radial-gradient(54rem 36rem at 96% 8%, hsl(var(--primary) / 0.26), transparent 56%),
-    linear-gradient(180deg, hsl(38 42% 97%) 0%, hsl(202 47% 96%) 100%);
+  background-image: linear-gradient(180deg, hsl(120 20% 97%) 0%, hsl(120 18% 96%) 100%);
 }
 
 .container-px {
