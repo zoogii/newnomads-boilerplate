@@ -17,11 +17,14 @@ This repository is a New Nomads Academy Next.js boilerplate for turning Figma de
 ## Recommended Workflow
 1. Inspect `README.md`, `app/page.tsx`, `app/layout.tsx`, `components/sections/`, and `lib/` before changing anything.
 2. Convert design requirements into tokens and component structure first.
-3. Add or update the smallest number of files needed.
-4. Validate with lint/build before finishing.
+3. Set `lib/design-tokens.ts` (`DESIGN_TYPOGRAPHY.primaryFontFamily`) from Figma typography context.
+4. Add or update the smallest number of files needed.
+5. Validate with lint/build before finishing.
 
 ## Figma Guidance
 - When given a Figma MCP link, extract layout intent, spacing scale, component hierarchy, and asset needs.
+- Use the Figma MCP link from the user prompt/chat and do not introduce Figma font env vars.
+- Keep typography restricted to Google-hosted UTF-8-safe fonts with Inter fallback.
 - Document how students should translate the design into code.
 - Prefer locally stored assets from `public/assets`.
 

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Sora", "Manrope", "Segoe UI", sans-serif;
+  --font-sans: "Inter", "Segoe UI", "Noto Sans", Arial, sans-serif;
   --font-mono: "JetBrains Mono", "Consolas", monospace;
 
   --background: 35 33% 97%;

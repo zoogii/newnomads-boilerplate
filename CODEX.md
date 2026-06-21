@@ -11,6 +11,7 @@ Help students convert Figma MCP links into polished frontend implementations wit
 - The homepage should stay lightweight and instructional.
 - Public assets must be local.
 - Payment and webhook logic must remain server-side.
+- Do not require Figma link or access token in `.env.local` for typography.
 
 ## When Editing
 - Make the smallest change that solves the task.
@@ -20,10 +21,12 @@ Help students convert Figma MCP links into polished frontend implementations wit
 
 ## Figma Implementation Workflow
 1. Read the Figma MCP link or design context.
-2. Identify tokens, hierarchy, sections, and asset references.
-3. Update `app/globals.css` and `tailwind.config.ts` if the visual system changes.
-4. Update the relevant section or UI component.
-5. Update docs if the setup or environment contract changed.
+2. Extract primary typography and set `lib/design-tokens.ts` -> `DESIGN_TYPOGRAPHY.primaryFontFamily`.
+3. Use only Google-hosted UTF-8-safe fonts and keep Inter as fallback.
+4. Identify tokens, hierarchy, sections, and asset references.
+5. Update `app/globals.css` and `tailwind.config.ts` if the visual system changes.
+6. Update the relevant section or UI component.
+7. Update docs if the setup or environment contract changed.
 
 ## Validation Rules
 - Run `npm run lint` after editing application code.

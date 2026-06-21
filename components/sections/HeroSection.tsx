@@ -3,6 +3,7 @@ import { BadgeCheck, CheckCircle2, ClipboardList, LayoutGrid, WandSparkles } fro
 
 const instructions = [
   "Figma MCP link-ийг аваад дизайн context-ийг нь шууд унш.",
+  "Typography-г Figma-с автоматаар уншаад Google font-оор шууд тааруул.",
   "Токенуудыг app/globals.css болон tailwind.config.ts дээр map хий.",
   "Section бүрийг components/sections дотор нэг нэгээр нь хэрэгжүүл.",
   "Локал asset, Cal.com, byl.mn тохиргоог .env.local болон public/assets дээр холбо.",

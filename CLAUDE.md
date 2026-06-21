@@ -26,6 +26,9 @@ Build and maintain a premium, production-ready, Figma-first frontend starter tha
 
 ## Figma-to-Code Rules
 - Treat a Figma MCP link as the source of truth for layout, spacing, hierarchy, and asset placement.
+- Read the Figma MCP link from the user prompt, not from environment variables.
+- Set typography through `lib/design-tokens.ts` (`DESIGN_TYPOGRAPHY.primaryFontFamily`) based on Figma context.
+- Keep typography limited to Google-hosted UTF-8-safe fonts with Inter fallback.
 - Map design tokens in `app/globals.css` and `tailwind.config.ts` first.
 - Reuse existing components before creating new ones.
 - Add assets locally under `public/assets`; never hotlink Figma images in production code.

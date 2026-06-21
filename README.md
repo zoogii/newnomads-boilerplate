@@ -38,6 +38,19 @@ Set these in .env.local:
 - BYL_API_TOKEN
 - BYL_WEBHOOK_SECRET
 
+Typography notes:
+- Students provide a Figma MCP link directly in the prompt/chat (not in `.env.local`).
+- Copilot reads typography from the shared Figma context and updates `lib/design-tokens.ts` (`primaryFontFamily`).
+- The app only loads Google-hosted UTF-8-safe fonts from an allowlist.
+- If the chosen font is not in the allowlist, it falls back to Inter automatically.
+- Do not add Figma link or Figma token environment variables for font setup.
+
+## Student Prompt Template
+
+Use this exact prompt pattern when starting from a Figma MCP link:
+
+"Here is my Figma MCP link: <PASTE_LINK>. Read the design context, set `DESIGN_TYPOGRAPHY.primaryFontFamily` in `lib/design-tokens.ts` from the Figma typography, keep only Google UTF-8-safe fonts, and implement the page sections to match the design."
+
 Payment notes:
 - `BYL_MODE=test` keeps the flow in test mode and normalizes invoice creation for safe development.
 - `BYL_MODE=live` uses the real project endpoint and real invoice amounts.
@@ -79,11 +92,13 @@ public/assets/
 
 ## Student Workflow
 
-1. Export assets from Figma and place them in public/assets (do not hotlink Figma URLs).
-2. Map design tokens in app/globals.css and tailwind.config.ts.
-3. Build reusable atoms in components/ui.
-4. Compose pages from components/sections.
-5. Replace mocked byl.mn payload mapping in lib/byl.ts with your production contract.
+1. Share the Figma MCP link in prompt/chat.
+2. Let Copilot read typography and set `lib/design-tokens.ts` (`DESIGN_TYPOGRAPHY.primaryFontFamily`).
+3. Export assets from Figma and place them in public/assets (do not hotlink Figma URLs).
+4. Map design tokens in app/globals.css and tailwind.config.ts.
+5. Build reusable atoms in components/ui.
+6. Compose pages from components/sections.
+7. Replace mocked byl.mn payload mapping in lib/byl.ts with your production contract.
 
 ## Run Notes
 
